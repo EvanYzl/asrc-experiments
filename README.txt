@@ -2,7 +2,7 @@ ASRC experiment code and benchmark datasets
 
 Source and benchmark-data snapshot, 2026-09-08.
 
-This private repository contains experiment code, run configurations, dependency
+This public repository contains experiment code, run configurations, dependency
 specifications, four benchmark datasets, and third-party attribution files. It keeps
 the original relative directory layout, including historical experiment-specific
 source snapshots and baseline adaptations.
