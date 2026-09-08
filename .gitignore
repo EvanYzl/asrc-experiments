@@ -1,4 +1,4 @@
-# Keep this repository source-only.
+# Keep code and canonical benchmark inputs; omit weights and experiment outputs.
 *.[mM][dD]
 *.markdown
 *.mdx
@@ -59,8 +59,12 @@ RESULTS.json
 result.json
 metrics.json
 training_history.json
-data/raw/
 literature/
 templates/
 outputs/eswa/manuscript/
 outputs/eswa/reviews/
+
+# Canonical dataset text files and checksum inventories are tracked.
+!data/**/*.tsv
+!data/**/*.txt
+!data/manifests/*.csv

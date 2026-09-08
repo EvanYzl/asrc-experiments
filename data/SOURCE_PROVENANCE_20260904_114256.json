@@ -1,0 +1,84 @@
+{
+  "downloaded_at": "2026-09-04T11:42:56+08:00",
+  "canonical_data_root": "G:\\zhishitupui\\data\\raw\\dmkgc",
+  "source": {
+    "repository": "https://github.com/JiaweiSheng/DMKGC.git",
+    "commit": "8b8a47ac067af8364eb4b4e25fbc49372c3cbcfe",
+    "local_verified_clone": "G:\\zhishitupui\\work\\DMKGC-review",
+    "dataset_paths_clean_in_git": true
+  },
+  "datasets": [
+    {
+      "name": "DBP-5L",
+      "directory": "datasetdbp5l",
+      "domains": ["el", "en", "es", "fr", "ja"],
+      "file_count": 31,
+      "bytes": 6977405,
+      "train": 138476,
+      "validation": 67761,
+      "test": 19624,
+      "alignment_files": 10,
+      "alignment_rows": 37723,
+      "upstream_origin_declared_by_dmkgc": "https://github.com/RongchuanTang/LSMGA-MKGC",
+      "cross_repository_hash_audit": "31/31 files identical to LSMGA commit bca492d299d0f2dd2c8755358ab150e6bc70deb8"
+    },
+    {
+      "name": "E-PKG",
+      "directory": "datasetdepkg",
+      "domains": ["de", "es", "fr", "it", "jp", "uk"],
+      "aliases": {"jp": "JA", "uk": "EN"},
+      "file_count": 46,
+      "bytes": 60859835,
+      "train": 224694,
+      "validation": 112315,
+      "test": 37565,
+      "alignment_files": 15,
+      "alignment_rows": 60038,
+      "upstream_origin_declared_by_dmkgc": "https://github.com/amzn/ss-aga-kgc",
+      "cross_repository_hash_audit": "46/46 files identical to LSMGA commit bca492d299d0f2dd2c8755358ab150e6bc70deb8; split/entity/alignment files also checked against SS-AGA, with seven aggregate KG/relation files differing"
+    },
+    {
+      "name": "DWY",
+      "directory": "datasetdwy",
+      "domains": ["db", "wk", "yg"],
+      "file_count": 19,
+      "bytes": 21802197,
+      "train": 258732,
+      "validation": 32341,
+      "test": 32486,
+      "alignment_files": 3,
+      "alignment_rows": 18068,
+      "split_identity": "DMKGC split only",
+      "must_not_mix_with": "IMKGC repository DWY split",
+      "upstream_origin_declared_by_dmkgc": "https://github.com/nju-websoft/BootEA"
+    }
+  ],
+  "integrity": {
+    "total_files": 96,
+    "total_bytes": 89639437,
+    "sha256_source_copy_mismatches": 0,
+    "kg_count": 14,
+    "invalid_triple_rows": 0,
+    "entity_id_bound_failures": 0,
+    "alignment_file_count": 28,
+    "invalid_alignment_rows": 0,
+    "hash_manifest": "G:\\zhishitupui\\data\\manifests\\SHA256SUMS.csv",
+    "dataset_stats": "G:\\zhishitupui\\data\\manifests\\DATASET_STATS.csv",
+    "alignment_stats": "G:\\zhishitupui\\data\\manifests\\ALIGNMENT_STATS.csv"
+  },
+  "known_paper_vs_file_discrepancies": [
+    {
+      "item": "DBP-5L es entities",
+      "paper_table_7": 12382,
+      "official_file_lines": 12381,
+      "decision": "use official file"
+    },
+    {
+      "item": "E-PKG uk validation triples",
+      "paper_table_7": 39150,
+      "official_file_lines": 30150,
+      "decision": "use official file"
+    }
+  ],
+  "license_note": "The pinned DMKGC repository has no standalone LICENSE file. Verify original dataset licenses before redistribution."
+}

@@ -1,0 +1,2 @@
+﻿dataset,pair,rows,unique_source_entities,unique_target_entities,source_alignment_pct,target_alignment_pct,invalid_rows,source_id_bounds_ok,target_id_bounds_ok
+WK3l-15k,EN_F-FR,2496,2496,2458,16.454611378469245,15.968297277983499,0,True,True

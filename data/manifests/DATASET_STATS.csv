@@ -1,0 +1,15 @@
+﻿dataset,kg,entities,relation_ids_observed,train,validation,test,invalid_triple_rows,max_entity_id,entity_id_bound_ok
+datasetdbp5l,el,5231,160,8670,4152,1017,0,5230,True
+datasetdbp5l,en,13996,861,48652,24051,7464,0,13995,True
+datasetdbp5l,es,12381,241,33036,16220,4810,0,12380,True
+datasetdbp5l,fr,13176,236,30139,14705,4171,0,13175,True
+datasetdbp5l,ja,11805,172,17979,8633,2162,0,11804,True
+datasetdepkg,de,17223,21,45515,22753,7602,0,17222,True
+datasetdepkg,es,9595,21,18090,9039,3034,0,9594,True
+datasetdepkg,fr,17068,21,47999,23994,8022,0,17067,True
+datasetdepkg,it,15670,21,42767,21377,7148,0,15669,True
+datasetdepkg,jp,2642,21,10013,5002,1688,0,2641,True
+datasetdepkg,uk,16544,21,60310,30150,10071,0,16543,True
+datasetdwy,db,23315,180,85506,10688,10780,0,23314,True
+datasetdwy,wk,17743,90,82047,10255,10296,0,17742,True
+datasetdwy,yg,13864,27,91179,11398,11410,0,13863,True
