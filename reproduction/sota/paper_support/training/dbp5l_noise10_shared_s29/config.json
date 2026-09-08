@@ -1,0 +1,198 @@
+{
+  "method": "ASRC registered component/perturbation control",
+  "recipe": {
+    "rank": 256,
+    "reg": 0.01,
+    "lr": 0.1,
+    "epochs": 40,
+    "batch_size": 512,
+    "valid_every": 5,
+    "patience": 5,
+    "reciprocal": true,
+    "train_keep": 1.0,
+    "alignment_keep": 1.0,
+    "alignment_noise": 0.1,
+    "perturbation_seed": 20260906,
+    "dataset": "dbp5l",
+    "mode": "shared",
+    "seed": 29
+  },
+  "id": "dbp5l_noise10_shared_s29",
+  "smoke_only": false,
+  "alignment": {
+    "mode": "shared",
+    "input_entities": 56589,
+    "alignment_files": {
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/el-en.tsv": {
+        "sha256": "523370fba7580bb10b8e9dd5f3788d73664fe191def69b7add0695525cbebcb8",
+        "original_unique_pairs": 2280,
+        "selected_pairs": 2280,
+        "derived_unique_pairs": 2280,
+        "replaced_second_endpoints": 228,
+        "derived_sha256": "879ed0cca5a590cc0b3ed0cb34d5be8b46990db27ab13ed8e0e148275c2091e6"
+      },
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/el-es.tsv": {
+        "sha256": "00c744cf498a5d34f31598f1a76c9d36120591f80d2dba8b927901fbd6dc9f0e",
+        "original_unique_pairs": 2212,
+        "selected_pairs": 2212,
+        "derived_unique_pairs": 2212,
+        "replaced_second_endpoints": 221,
+        "derived_sha256": "831c6fc2d2e875903de03b07251ef22cef10bfa5c78ea6ec867bc101f691afd3"
+      },
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/el-fr.tsv": {
+        "sha256": "f2214d7f7978c8c454f16b6b8a76c1c0b86255dcc98e098bedba538ed7b1339a",
+        "original_unique_pairs": 2290,
+        "selected_pairs": 2290,
+        "derived_unique_pairs": 2290,
+        "replaced_second_endpoints": 229,
+        "derived_sha256": "13e0f9e20a3bf5b5ab72d37166970d43ced0e64cb6cce4ee1994b1c1d2ebec23"
+      },
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/el-ja.tsv": {
+        "sha256": "103baf3cc4896af82d03e9d65fe2278a63e0d67145af2b78b16919461585e43e",
+        "original_unique_pairs": 2224,
+        "selected_pairs": 2224,
+        "derived_unique_pairs": 2224,
+        "replaced_second_endpoints": 222,
+        "derived_sha256": "07c4eac790384bfef2e09e6d463259a32180ed76c7e959dc4ce11d14f144db01"
+      },
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/en-fr.tsv": {
+        "sha256": "1970e21b82e09a50b944eb6fa5d691fac102563fc6177b5e6491931920afe6c1",
+        "original_unique_pairs": 5234,
+        "selected_pairs": 5234,
+        "derived_unique_pairs": 5234,
+        "replaced_second_endpoints": 523,
+        "derived_sha256": "3a4aec5bc79cb939f87e4a4ac3dad961ccdadec087eb1e220851ee7b94c783b2"
+      },
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/es-en.tsv": {
+        "sha256": "e92ad7d75818e851f8d1860bd6ec5d5c7f3491a27c49a8fc8045ed7eb000202c",
+        "original_unique_pairs": 4812,
+        "selected_pairs": 4812,
+        "derived_unique_pairs": 4812,
+        "replaced_second_endpoints": 481,
+        "derived_sha256": "de2b36e2cb5e1b4135824d9fcea0117fe37f82c74c9c2f14d2c3924d203fa621"
+      },
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/es-fr.tsv": {
+        "sha256": "c1f892d7c015fdf7ae41207c50e6e6fff0c1144411e810bd9ed221bf8309dd75",
+        "original_unique_pairs": 4549,
+        "selected_pairs": 4549,
+        "derived_unique_pairs": 4549,
+        "replaced_second_endpoints": 454,
+        "derived_sha256": "cc44af8d049c06fb866640c7a86f8a691593a98af223a5ccbc4f74153e9eaedd"
+      },
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/ja-en.tsv": {
+        "sha256": "04a009f51f6f9e372dbd98bb1f5af6978db32df1575cd84be9107ed97341bd53",
+        "original_unique_pairs": 4529,
+        "selected_pairs": 4529,
+        "derived_unique_pairs": 4529,
+        "replaced_second_endpoints": 452,
+        "derived_sha256": "fb960acc68aaaf80b53e4f1c48147023e8b833b66c3170ee9b905670dc8c4e63"
+      },
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/ja-es.tsv": {
+        "sha256": "3e84cf0f4540bf2e7b60854ba644c7c61fce8e6395a2c9f0fee9b942fd86b252",
+        "original_unique_pairs": 4716,
+        "selected_pairs": 4716,
+        "derived_unique_pairs": 4716,
+        "replaced_second_endpoints": 471,
+        "derived_sha256": "09ea1a00aee9afa2e61a5a0b647379b580d8adf44fe84f3a548272a62ba02328"
+      },
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/ja-fr.tsv": {
+        "sha256": "c032f15074aede29ef9bee0276e51eb412272d64e54991df17241351ce8527f4",
+        "original_unique_pairs": 4746,
+        "selected_pairs": 4746,
+        "derived_unique_pairs": 4746,
+        "replaced_second_endpoints": 474,
+        "derived_sha256": "da07a9036f4e5f13f52d0ed8765f0a98b2957234e7a4a63fa39d583feb8e0781"
+      }
+    },
+    "accepted_links": 25983,
+    "redundant_links": 7145,
+    "conflicting_links": 4464,
+    "training": {
+      "el": {
+        "original_rows": 8670,
+        "kept_rows": 8670,
+        "original_unique": 8670,
+        "kept_unique": 8670,
+        "kept_fraction": 1.0,
+        "original_sha256": "df957c8da1aae1996b64e12c3ae1926e4299626b802bb6cd851c94db9c1cd2e8",
+        "derived_sha256": "df957c8da1aae1996b64e12c3ae1926e4299626b802bb6cd851c94db9c1cd2e8",
+        "indices_sha256": "d457d0ea3bce47ee5d2e925821480e2cb141ce5d5d4eb3652d791bea0ebd4e7a"
+      },
+      "en": {
+        "original_rows": 48652,
+        "kept_rows": 48652,
+        "original_unique": 48652,
+        "kept_unique": 48652,
+        "kept_fraction": 1.0,
+        "original_sha256": "cc4418aac9b0202ac93fbace7fe8d62fb6b8241664b5a9bc9e36e1424506158e",
+        "derived_sha256": "cc4418aac9b0202ac93fbace7fe8d62fb6b8241664b5a9bc9e36e1424506158e",
+        "indices_sha256": "9048a2a9a59d6e3a62e4a5002336b4fbe4ce6d4a11439ea484afc3fdc67fd734"
+      },
+      "es": {
+        "original_rows": 33036,
+        "kept_rows": 33036,
+        "original_unique": 33036,
+        "kept_unique": 33036,
+        "kept_fraction": 1.0,
+        "original_sha256": "60dadc9109422c2a5c74038c42a3f86fa6206f78b023a1deba8e5085beefd2cc",
+        "derived_sha256": "60dadc9109422c2a5c74038c42a3f86fa6206f78b023a1deba8e5085beefd2cc",
+        "indices_sha256": "7b12a3d117ae349d211ca753ddfe66e17dd5512bf1b239e5e78606c215eae409"
+      },
+      "fr": {
+        "original_rows": 30139,
+        "kept_rows": 30139,
+        "original_unique": 30139,
+        "kept_unique": 30139,
+        "kept_fraction": 1.0,
+        "original_sha256": "df19999686ad451fc21a36917b84613ded3db2c97cd0edde296732e62c2bc258",
+        "derived_sha256": "df19999686ad451fc21a36917b84613ded3db2c97cd0edde296732e62c2bc258",
+        "indices_sha256": "d631501166dbd08c709c8d2e08858e252a03b973be09a488baa85daddea27ede"
+      },
+      "ja": {
+        "original_rows": 17979,
+        "kept_rows": 17979,
+        "original_unique": 17979,
+        "kept_unique": 17979,
+        "kept_fraction": 1.0,
+        "original_sha256": "f9bcd8be19712babb330ffaa840c6466552a76115851e3776958f04883d4c94a",
+        "derived_sha256": "f9bcd8be19712babb330ffaa840c6466552a76115851e3776958f04883d4c94a",
+        "indices_sha256": "641cacac80cf471de9c3bc880147dd33900baeb4a2fe8f5027801c117b48c167"
+      }
+    },
+    "perturbation_seed": 20260906,
+    "filter_policy": "Original full-public-train validation/test filters; reduction applies only to optimization facts.",
+    "shared_entities": 30606,
+    "relations": 960,
+    "entity_map_sha256": {
+      "el": "351f450cb5efaa0ba3844a2df91a2aaf3d0e3efaa143ec0c81c34ff3793d663e",
+      "en": "a18bef2fcc1c0abe7aabffa284c354bd89e22b605856a97b1d18e51d12d5a960",
+      "es": "5e8a0c2889d58d07c4a3f7adf6ad3d042a18fe4750c2365bfe72f084130156a3",
+      "fr": "fda5c1eea7941bc844997e85ce3950f6b1f6b2224e7b2b2e95ff9047bb61f5b8",
+      "ja": "45827db97b1b976fa6168e7d471b34e925d3a2a673cbfb63ff691b86a6016ed4"
+    },
+    "rule": "Stable supplied alignment union, rejecting within-KG collisions; fixed derived perturbations; no held-out alignment."
+  },
+  "protocol": "kbs-baselines-v1-20260905",
+  "selection": "val_select macro tail MRR, train+val_select filter, full candidates, ascending entity-ID ties; earliest checkpoint on tie",
+  "input": "Registered derived optimization facts and supplied alignments only; full original positive filters retained",
+  "test_access": false,
+  "manifests": {
+    "el": "3462bcefdf8cc8f619032824457b59d14ae55a5d5ca84fbf07c14a65238f69c5",
+    "en": "384d89294b5cf2e92e0659cd2ca24b5fc4648a52687f93315b8a4dbf2bc6d9bc",
+    "es": "bcfc90789c8024c40ab087de8cdfe3b6b1f8bd7f86f32b4c53a13516598c752e",
+    "fr": "ef4ef04dce13b3582ef178250eab342ce3df32d9822197ed0a0b1395ab8f5db5",
+    "ja": "db0d155869baa40d6def6601a7cc5b218b945d1fb0b843a295e6dddd71df31df"
+  },
+  "source_hashes": {
+    "train_support.py": "47fa8e08ffb57882d0bbafb1f5efda7467ffe99cf60f4956e7bb77fc0c7c8996",
+    "frozen_data.py": "c69444c2973d177ffcef995c978f0d2bbb86647c618b9d94e5507aa9947ec9fb",
+    "support_data.py": "63125cf992d6add3252eef93c005aa99191ceab01126297da5ff20ff73280080"
+  },
+  "environment": {
+    "torch": "2.10.0+cu128",
+    "numpy": "2.2.6",
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "visible_gpu": "0",
+    "pid": 7473
+  }
+}

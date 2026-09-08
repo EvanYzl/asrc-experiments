@@ -1,0 +1,77 @@
+{
+  "freeze_sha256": "90f9c9da96545c4ab2d59401e669bd26d7723f5a8f1653fb02864ede26deb134",
+  "entry": {
+    "id": "dbp5l_noise10_shared_s29",
+    "dataset": "dbp5l",
+    "variant": "noise10_shared",
+    "seed": 29,
+    "recipe": {
+      "rank": 256,
+      "reg": 0.01,
+      "lr": 0.1,
+      "epochs": 40,
+      "batch_size": 512,
+      "valid_every": 5,
+      "patience": 5,
+      "reciprocal": true,
+      "train_keep": 1.0,
+      "alignment_keep": 1.0,
+      "alignment_noise": 0.1,
+      "perturbation_seed": 20260906,
+      "dataset": "dbp5l",
+      "mode": "shared",
+      "seed": 29
+    },
+    "training_path": "reproduction/sota/paper_support/training/dbp5l_noise10_shared_s29",
+    "evaluation_path": "reproduction/sota/paper_support/evaluation/dbp5l_noise10_shared_s29",
+    "reuse_training": false,
+    "reuse_locked_test": false,
+    "trainer": "support",
+    "checkpoint_sha256": "5c3503df0ebc8126117332fcbd53783880e84b6a9ca4808e723f45f2aa540e3b",
+    "training_result_sha256": "0ad34a1beef0878529dbed5dea44240a87f51875d673d634048f01e4886aa27a",
+    "validation": {
+      "macro": {
+        "mrr": 0.6189063483853061,
+        "h1": 0.5018696285721703,
+        "h10": 0.8149531795989706
+      },
+      "per_kg": {
+        "el": {
+          "mrr": 0.7269228258184444,
+          "h1": 0.6117533718689788,
+          "h10": 0.9065510597302505
+        },
+        "en": {
+          "mrr": 0.49707348304463583,
+          "h1": 0.3859138533178114,
+          "h10": 0.6915848993846666
+        },
+        "es": {
+          "mrr": 0.6083383069308606,
+          "h1": 0.4839704069050555,
+          "h10": 0.8143033292231813
+        },
+        "fr": {
+          "mrr": 0.6248418452000853,
+          "h1": 0.5060519515843873,
+          "h10": 0.8263293893648851
+        },
+        "ja": {
+          "mrr": 0.6373552809325049,
+          "h1": 0.5216585591846189,
+          "h10": 0.8359972202918694
+        }
+      }
+    },
+    "best_epoch": 40,
+    "entity_map_sha256": {
+      "el": "351f450cb5efaa0ba3844a2df91a2aaf3d0e3efaa143ec0c81c34ff3793d663e",
+      "en": "a18bef2fcc1c0abe7aabffa284c354bd89e22b605856a97b1d18e51d12d5a960",
+      "es": "5e8a0c2889d58d07c4a3f7adf6ad3d042a18fe4750c2365bfe72f084130156a3",
+      "fr": "fda5c1eea7941bc844997e85ce3950f6b1f6b2224e7b2b2e95ff9047bb61f5b8",
+      "ja": "45827db97b1b976fa6168e7d471b34e925d3a2a673cbfb63ff691b86a6016ed4"
+    },
+    "parameters": 16653312
+  },
+  "protocol": "kbs-baselines-v1-20260905"
+}

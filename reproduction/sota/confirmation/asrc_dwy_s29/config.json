@@ -1,0 +1,66 @@
+{
+  "method": "Aligned reciprocal ComplEx-N3",
+  "recipe": {
+    "dataset": "dwy",
+    "sharing": "shared",
+    "rank": 256,
+    "reg": 0.01,
+    "lr": 0.1,
+    "epochs": 40,
+    "batch_size": 512,
+    "valid_every": 5,
+    "patience": 5,
+    "seed": 29,
+    "output": "reproduction/sota/confirmation/asrc_dwy_s29",
+    "resume": null
+  },
+  "alignment": {
+    "sharing": "shared",
+    "input_entities": 54922,
+    "alignment_files": {
+      "data/raw/dmkgc/datasetdwy/seed_alignlinks/db-wk.tsv": {
+        "sha256": "be679bae827bc658c687afb3b15f252c98652081510a18d361407fe43817dbb2",
+        "pairs": 9551
+      },
+      "data/raw/dmkgc/datasetdwy/seed_alignlinks/db-yg.tsv": {
+        "sha256": "a7f66f01b8e2b9feb6c91838b1672ca05e7f27a358ea1bbfe63192045d2e1cef",
+        "pairs": 6553
+      },
+      "data/raw/dmkgc/datasetdwy/seed_alignlinks/yg-wk.tsv": {
+        "sha256": "9443148df941c3597765ccbafb841173036fd73a9c9cb15968125ded13de5e50",
+        "pairs": 1964
+      }
+    },
+    "accepted_links": 16143,
+    "redundant_links": 1925,
+    "conflicting_links": 0,
+    "shared_entities": 38779,
+    "relations": 297,
+    "entity_map_sha256": {
+      "db": "427a7788a0fab350907c2186a638fdb6ebe8e75b77e5f54bfc7a4126e63978d3",
+      "wk": "8910ed471b979ad4fb072b261f315ee0173f97587f34af0b093e60038fab9d43",
+      "yg": "e0324482d42a4aacee7f95823a266cb43448cf4d9aed26d1f66562bea63b0f16"
+    },
+    "rule": "Stable supplied alignment union; reject merges that identify distinct entities within a KG; no learned or held-out alignment."
+  },
+  "protocol": "kbs-baselines-v1-20260905",
+  "selection": "val_select macro tail MRR, train+val_select filter, full candidates, ascending entity-ID ties; earliest checkpoint on tie",
+  "input": "published train triples and supplied alignments only; reciprocal train augmentation",
+  "test_access": false,
+  "manifests": {
+    "db": "3ce81cd497a4b7c203cbf9126ac2fb77b62809395ced3d96fc54b1b817828dc1",
+    "wk": "723734222f273577230b32e5ca8805444ba2fa1c93d064b158ecb033380d4b5e",
+    "yg": "a6dd1aeab108ea957ceebe7ff627ba69fbc72ada300289bbd374ce18f1716aea"
+  },
+  "source_hashes": {
+    "train_complex.py": "d7bebad3de4e1838966051e5864c2b22e2a222cae43d052562cc8a181e856039",
+    "frozen_data.py": "c69444c2973d177ffcef995c978f0d2bbb86647c618b9d94e5507aa9947ec9fb"
+  },
+  "environment": {
+    "torch": "2.10.0+cu128",
+    "numpy": "2.2.6",
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "visible_gpu": "4",
+    "pid": 5723
+  }
+}

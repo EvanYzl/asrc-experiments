@@ -1,0 +1,98 @@
+{
+  "timestamp": "2026-09-06T05:10:24.175063+00:00",
+  "dataset": "wk3l",
+  "seed": 17,
+  "method": "ASRC (Alignment-selective Reciprocal ComplEx)",
+  "algorithm_definition": "Reciprocal ComplEx, full-softmax training, N3 regularization, optional deterministic alignment entity sharing selected only by val_select; no text/external data",
+  "recipe": {
+    "dataset": "wk3l",
+    "sharing": "shared",
+    "rank": 256,
+    "reg": 0.01,
+    "lr": 0.1,
+    "epochs": 40,
+    "batch_size": 512,
+    "valid_every": 5,
+    "patience": 5,
+    "seed": 17,
+    "output": "reproduction/sota/pilot02/wk3l_shared_r256_n3p01_s17",
+    "resume": null
+  },
+  "checkpoint": "reproduction/sota/pilot02/wk3l_shared_r256_n3p01_s17/best.pt",
+  "checkpoint_sha256": "449aa2219c4df4a63ef02f6b1eca69b108ce9869b8bd09992877278f6508f969",
+  "best_epoch": 35,
+  "validation": {
+    "macro": {
+      "mrr": 0.4475911460228739,
+      "h1": 0.3476349569192896,
+      "h10": 0.653361467674814
+    },
+    "per_kg": {
+      "fr": {
+        "mrr": 0.4475911460228739,
+        "h1": 0.3476349569192896,
+        "h10": 0.653361467674814
+      }
+    }
+  },
+  "validation_result_sha256": "f0b3fcfc2f9d5ea41d292bde85df8cc3ea0439fdc4d805081b2132cbd673a9a0",
+  "selection_basis": "Reused complete seed17 pilot; choose maximum val_select macro MRR; earlier epoch on exact tie. Other seeds not used for selection or this phase result.",
+  "source_hashes": {
+    "reproduction/sota/train_complex.py": "d7bebad3de4e1838966051e5864c2b22e2a222cae43d052562cc8a181e856039",
+    "reproduction/sota/frozen_data.py": "c69444c2973d177ffcef995c978f0d2bbb86647c618b9d94e5507aa9947ec9fb",
+    "reproduction/sota/evaluate_single.py": "044a8f79fcee1cc51930cc1158b86ff9b1bed35fa31032fbfe8a5c2027f08a13"
+  },
+  "common_sha256": "7fc15ebec0d13ed30682bc545f3fb25c668887240ada202475a965148ef7f6cc",
+  "reference_registry_sha256": "308cd8e7c35e010e17db8408bafec27855814b49ea0a024d5394023e2a5a8942",
+  "references": {
+    "mrr": {
+      "value": 0.4211137549371431,
+      "cell_id": "T2.wk3l.rotate.mrr",
+      "status": "local_reproduction",
+      "seeds": [
+        17,
+        29,
+        43
+      ],
+      "user_star": false
+    },
+    "h1": {
+      "value": 0.31886521497025294,
+      "cell_id": "T2.wk3l.rotate.h1",
+      "status": "local_reproduction",
+      "seeds": [
+        17,
+        29,
+        43
+      ],
+      "user_star": false
+    },
+    "h10": {
+      "value": 0.6486034993112746,
+      "cell_id": "T2.wk3l.transe.h10",
+      "status": "local_reproduction",
+      "seeds": [
+        17,
+        29,
+        43
+      ],
+      "user_star": false
+    }
+  },
+  "predecessor_locks": [
+    {
+      "dataset": "dbp5l",
+      "lock_sha256": "e358ffb5b9a34a0752549a61227866081917167a5a11d4c054705f9632f78899"
+    },
+    {
+      "dataset": "depkg",
+      "lock_sha256": "de80d0749e19e43e40fd80b6f48cddca2c5c3c0ec77a69d49be5609ea7b6ad0e"
+    },
+    {
+      "dataset": "dwy",
+      "lock_sha256": "4b0edded01aaef62b2a01047f4641de873625a624bf369c1921dc98126aa2108"
+    }
+  ],
+  "protocol": "kbs-baselines-v1-20260905",
+  "test_policy": "One test; no retraining/reselection after test; lock before transfer."
+}

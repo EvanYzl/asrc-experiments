@@ -1,0 +1,44 @@
+{
+  "freeze_sha256": "6fc75706963da679d28dab1763310a34c903f83c20938c168872f4f30ef91288",
+  "entry": {
+    "dataset": "wk3l",
+    "seed": 43,
+    "checkpoint": "reproduction/sota/confirmation/asrc_wk3l_s43/best.pt",
+    "checkpoint_sha256": "cf2d436ca960177f3e7001129d08747942b2f95b958581ddca247b56369c7ad1",
+    "training_result_sha256": "047aaf02e77113f92e571e8f6947abdc1632d5a76a3016cfb4aa7d4dbd4a9a5f",
+    "config_sha256": "99dbc5b41467818c7473f32419a5b8100d7952e562c47aca61d143af57659525",
+    "recipe": {
+      "dataset": "wk3l",
+      "sharing": "shared",
+      "rank": 256,
+      "reg": 0.01,
+      "lr": 0.1,
+      "epochs": 40,
+      "batch_size": 512,
+      "valid_every": 5,
+      "patience": 5,
+      "seed": 43,
+      "output": "reproduction/sota/confirmation/asrc_wk3l_s43",
+      "resume": null
+    },
+    "best_epoch": 30,
+    "validation": {
+      "macro": {
+        "mrr": 0.44228186085373483,
+        "h1": 0.34165640935466857,
+        "h10": 0.6504894203153391
+      },
+      "per_kg": {
+        "fr": {
+          "mrr": 0.44228186085373483,
+          "h1": 0.34165640935466857,
+          "h10": 0.6504894203153391
+        }
+      }
+    },
+    "evaluation_result": "reproduction/sota/three_seed/evaluation/wk3l_s43/result.json",
+    "reuse_locked_test": false,
+    "checkpoint_already_frozen_before_seed17_tests": true
+  },
+  "protocol": "kbs-baselines-v1-20260905"
+}

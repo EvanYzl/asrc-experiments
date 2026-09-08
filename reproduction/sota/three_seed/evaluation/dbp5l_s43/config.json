@@ -1,0 +1,64 @@
+{
+  "freeze_sha256": "6fc75706963da679d28dab1763310a34c903f83c20938c168872f4f30ef91288",
+  "entry": {
+    "dataset": "dbp5l",
+    "seed": 43,
+    "checkpoint": "reproduction/sota/confirmation/asrc_dbp5l_s43/best.pt",
+    "checkpoint_sha256": "31c0d45e413ec74d7115e92729b5fe1075cfc66cc731f19287b9b211936bc6b2",
+    "training_result_sha256": "41e04dcfba56fb002465a1db96cb1cdc4f9a4a6ef9e5df5e7f445912d606cb4d",
+    "config_sha256": "6820c888dc26daace4c466e12ecfedc684752bc5b49b603cf6ffaad8d925e38a",
+    "recipe": {
+      "dataset": "dbp5l",
+      "sharing": "shared",
+      "rank": 256,
+      "reg": 0.01,
+      "lr": 0.1,
+      "epochs": 40,
+      "batch_size": 512,
+      "valid_every": 5,
+      "patience": 5,
+      "seed": 43,
+      "output": "reproduction/sota/confirmation/asrc_dbp5l_s43",
+      "resume": null
+    },
+    "best_epoch": 35,
+    "validation": {
+      "macro": {
+        "mrr": 0.6842334835077407,
+        "h1": 0.5750022384499385,
+        "h10": 0.8604088477690255
+      },
+      "per_kg": {
+        "el": {
+          "mrr": 0.7724435021732756,
+          "h1": 0.6685934489402697,
+          "h10": 0.9296724470134875
+        },
+        "en": {
+          "mrr": 0.546342712386933,
+          "h1": 0.43854980874771327,
+          "h10": 0.7265923831697988
+        },
+        "es": {
+          "mrr": 0.6848657308742324,
+          "h1": 0.5701602959309494,
+          "h10": 0.8665844636251542
+        },
+        "fr": {
+          "mrr": 0.7027909931778173,
+          "h1": 0.5917312661498708,
+          "h10": 0.8841289269685843
+        },
+        "ja": {
+          "mrr": 0.7147244789264457,
+          "h1": 0.6059763724808895,
+          "h10": 0.8950660180681028
+        }
+      }
+    },
+    "evaluation_result": "reproduction/sota/three_seed/evaluation/dbp5l_s43/result.json",
+    "reuse_locked_test": false,
+    "checkpoint_already_frozen_before_seed17_tests": true
+  },
+  "protocol": "kbs-baselines-v1-20260905"
+}

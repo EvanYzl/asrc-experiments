@@ -1,0 +1,54 @@
+{
+  "freeze_sha256": "90f9c9da96545c4ab2d59401e669bd26d7723f5a8f1653fb02864ede26deb134",
+  "entry": {
+    "id": "wk3l_independent_s29",
+    "dataset": "wk3l",
+    "variant": "independent",
+    "seed": 29,
+    "recipe": {
+      "rank": 256,
+      "reg": 0.01,
+      "lr": 0.1,
+      "epochs": 40,
+      "batch_size": 512,
+      "valid_every": 5,
+      "patience": 5,
+      "reciprocal": true,
+      "train_keep": 1.0,
+      "alignment_keep": 1.0,
+      "alignment_noise": 0.0,
+      "perturbation_seed": 20260906,
+      "dataset": "wk3l",
+      "mode": "independent",
+      "seed": 29
+    },
+    "training_path": "reproduction/sota/paper_support/training/wk3l_independent_s29",
+    "evaluation_path": "reproduction/sota/paper_support/evaluation/wk3l_independent_s29",
+    "reuse_training": false,
+    "reuse_locked_test": false,
+    "trainer": "original",
+    "checkpoint_sha256": "f950e29af7d5508f92de0c37c0b05232529e69154d64d893a016ecdc1a28e941",
+    "training_result_sha256": "53a1ea45bb4efb4763529a7697194063d8d54dd2e1fd6ac930c06ed552361bb9",
+    "validation": {
+      "macro": {
+        "mrr": 0.44036394419682695,
+        "h1": 0.3437078717542934,
+        "h10": 0.6447453255963894
+      },
+      "per_kg": {
+        "fr": {
+          "mrr": 0.44036394419682695,
+          "h1": 0.3437078717542934,
+          "h10": 0.6447453255963894
+        }
+      }
+    },
+    "best_epoch": 40,
+    "entity_map_sha256": {
+      "en": "e5b6204fc90cd414a324a980444d3c0db157c2c05b722762a8c601ffcac0cf0d",
+      "fr": "f2f8ac60038ece865f7173288bd2b194cc5a339b0be978c9f930b8d587e3c443"
+    },
+    "parameters": 20409344
+  },
+  "protocol": "kbs-baselines-v1-20260905"
+}

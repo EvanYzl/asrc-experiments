@@ -1,0 +1,98 @@
+{
+  "method": "Aligned reciprocal ComplEx-N3",
+  "recipe": {
+    "dataset": "dbp5l",
+    "sharing": "shared",
+    "rank": 256,
+    "reg": 0.01,
+    "lr": 0.1,
+    "epochs": 40,
+    "batch_size": 512,
+    "valid_every": 5,
+    "patience": 5,
+    "seed": 29,
+    "output": "reproduction/sota/confirmation/asrc_dbp5l_s29",
+    "resume": null
+  },
+  "alignment": {
+    "sharing": "shared",
+    "input_entities": 56589,
+    "alignment_files": {
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/el-en.tsv": {
+        "sha256": "523370fba7580bb10b8e9dd5f3788d73664fe191def69b7add0695525cbebcb8",
+        "pairs": 2280
+      },
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/el-es.tsv": {
+        "sha256": "00c744cf498a5d34f31598f1a76c9d36120591f80d2dba8b927901fbd6dc9f0e",
+        "pairs": 2212
+      },
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/el-fr.tsv": {
+        "sha256": "f2214d7f7978c8c454f16b6b8a76c1c0b86255dcc98e098bedba538ed7b1339a",
+        "pairs": 2290
+      },
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/el-ja.tsv": {
+        "sha256": "103baf3cc4896af82d03e9d65fe2278a63e0d67145af2b78b16919461585e43e",
+        "pairs": 2224
+      },
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/en-fr.tsv": {
+        "sha256": "1970e21b82e09a50b944eb6fa5d691fac102563fc6177b5e6491931920afe6c1",
+        "pairs": 5234
+      },
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/es-en.tsv": {
+        "sha256": "e92ad7d75818e851f8d1860bd6ec5d5c7f3491a27c49a8fc8045ed7eb000202c",
+        "pairs": 4812
+      },
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/es-fr.tsv": {
+        "sha256": "c1f892d7c015fdf7ae41207c50e6e6fff0c1144411e810bd9ed221bf8309dd75",
+        "pairs": 4549
+      },
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/ja-en.tsv": {
+        "sha256": "04a009f51f6f9e372dbd98bb1f5af6978db32df1575cd84be9107ed97341bd53",
+        "pairs": 4529
+      },
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/ja-es.tsv": {
+        "sha256": "3e84cf0f4540bf2e7b60854ba644c7c61fce8e6395a2c9f0fee9b942fd86b252",
+        "pairs": 4716
+      },
+      "data/raw/dmkgc/datasetdbp5l/seed_alignlinks/ja-fr.tsv": {
+        "sha256": "c032f15074aede29ef9bee0276e51eb412272d64e54991df17241351ce8527f4",
+        "pairs": 4746
+      }
+    },
+    "accepted_links": 27149,
+    "redundant_links": 10443,
+    "conflicting_links": 0,
+    "shared_entities": 29440,
+    "relations": 960,
+    "entity_map_sha256": {
+      "el": "351f450cb5efaa0ba3844a2df91a2aaf3d0e3efaa143ec0c81c34ff3793d663e",
+      "en": "85db266b6d958873cfb388c4bd7751bddb2e5561bd60114b7bc6da858ed308f6",
+      "es": "8ee627703b036732d2cccce2250bd9750feee511efa1ca21fc00a8a8fd040a03",
+      "fr": "0a3690a65d9797ce05521ee50e1e91d5991ddbf2bf5e0165cc5fc4787965bd55",
+      "ja": "28c981e86b3b68278f979d6f0538425c081d4d0ed966f77b8452e634db31840e"
+    },
+    "rule": "Stable supplied alignment union; reject merges that identify distinct entities within a KG; no learned or held-out alignment."
+  },
+  "protocol": "kbs-baselines-v1-20260905",
+  "selection": "val_select macro tail MRR, train+val_select filter, full candidates, ascending entity-ID ties; earliest checkpoint on tie",
+  "input": "published train triples and supplied alignments only; reciprocal train augmentation",
+  "test_access": false,
+  "manifests": {
+    "el": "3462bcefdf8cc8f619032824457b59d14ae55a5d5ca84fbf07c14a65238f69c5",
+    "en": "384d89294b5cf2e92e0659cd2ca24b5fc4648a52687f93315b8a4dbf2bc6d9bc",
+    "es": "bcfc90789c8024c40ab087de8cdfe3b6b1f8bd7f86f32b4c53a13516598c752e",
+    "fr": "ef4ef04dce13b3582ef178250eab342ce3df32d9822197ed0a0b1395ab8f5db5",
+    "ja": "db0d155869baa40d6def6601a7cc5b218b945d1fb0b843a295e6dddd71df31df"
+  },
+  "source_hashes": {
+    "train_complex.py": "d7bebad3de4e1838966051e5864c2b22e2a222cae43d052562cc8a181e856039",
+    "frozen_data.py": "c69444c2973d177ffcef995c978f0d2bbb86647c618b9d94e5507aa9947ec9fb"
+  },
+  "environment": {
+    "torch": "2.10.0+cu128",
+    "numpy": "2.2.6",
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "visible_gpu": "0",
+    "pid": 5719
+  }
+}

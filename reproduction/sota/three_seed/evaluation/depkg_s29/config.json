@@ -1,0 +1,69 @@
+{
+  "freeze_sha256": "6fc75706963da679d28dab1763310a34c903f83c20938c168872f4f30ef91288",
+  "entry": {
+    "dataset": "depkg",
+    "seed": 29,
+    "checkpoint": "reproduction/sota/confirmation/asrc_depkg_s29/best.pt",
+    "checkpoint_sha256": "061c31fb13f62a4ba8815d008ac1d142d7e92f6edd4d9809f3e6f6bcff7c774e",
+    "training_result_sha256": "b7dfca9ac3d3ecf26fea78862aedbbdf30f5c381591f9d506c79cbc822e45fd1",
+    "config_sha256": "5d38d89aa33b6db7c56bda587a530f4f2eb6e84c338271acc1eb3c7a81cf95bc",
+    "recipe": {
+      "dataset": "depkg",
+      "sharing": "independent",
+      "rank": 256,
+      "reg": 0.01,
+      "lr": 0.1,
+      "epochs": 40,
+      "batch_size": 512,
+      "valid_every": 5,
+      "patience": 5,
+      "seed": 29,
+      "output": "reproduction/sota/confirmation/asrc_depkg_s29",
+      "resume": null
+    },
+    "best_epoch": 35,
+    "validation": {
+      "macro": {
+        "mrr": 0.5488578686466826,
+        "h1": 0.41614469115921415,
+        "h10": 0.7638139596962489
+      },
+      "per_kg": {
+        "de": {
+          "mrr": 0.5156844406096736,
+          "h1": 0.3777797310363013,
+          "h10": 0.7465061088160323
+        },
+        "es": {
+          "mrr": 0.45578393977830545,
+          "h1": 0.33008849557522124,
+          "h10": 0.6710176991150443
+        },
+        "fr": {
+          "mrr": 0.5244248496012516,
+          "h1": 0.3829290655997333,
+          "h10": 0.761023589230641
+        },
+        "it": {
+          "mrr": 0.539780638609167,
+          "h1": 0.4077088595752643,
+          "h10": 0.7491814014407334
+        },
+        "jp": {
+          "mrr": 0.6551927724130657,
+          "h1": 0.5261895241903238,
+          "h10": 0.8472610955617753
+        },
+        "uk": {
+          "mrr": 0.602280570868633,
+          "h1": 0.4721724709784411,
+          "h10": 0.807893864013267
+        }
+      }
+    },
+    "evaluation_result": "reproduction/sota/three_seed/evaluation/depkg_s29/result.json",
+    "reuse_locked_test": false,
+    "checkpoint_already_frozen_before_seed17_tests": true
+  },
+  "protocol": "kbs-baselines-v1-20260905"
+}

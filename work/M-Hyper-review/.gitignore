@@ -1,0 +1,13 @@
+case/
+data/
+datasets/FB15K237
+log/
+logs/
+png.ipynb
+ckpt/
+DB15K/img_features.pth
+DB15K/text_features.pth
+MKG-W/img_features.pth
+MKG-W/text_features.pth
+MKG-Y/img_features.pth
+MKG-Y/text_features.pth

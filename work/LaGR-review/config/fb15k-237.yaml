@@ -1,0 +1,9 @@
+trainer:
+  max_epochs: 20
+data:
+  batch_size: 64
+model:
+  remove_all: true
+  loss_fn: bce
+  num_negative_sample: 1024
+  adversarial_temperature: 0.5

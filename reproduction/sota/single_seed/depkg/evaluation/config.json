@@ -1,0 +1,126 @@
+{
+  "timestamp": "2026-09-06T05:01:51.567794+00:00",
+  "dataset": "depkg",
+  "seed": 17,
+  "method": "ASRC (Alignment-selective Reciprocal ComplEx)",
+  "algorithm_definition": "Reciprocal ComplEx, full-softmax training, N3 regularization, optional deterministic alignment entity sharing selected only by val_select; no text/external data",
+  "recipe": {
+    "dataset": "depkg",
+    "sharing": "independent",
+    "rank": 256,
+    "reg": 0.01,
+    "lr": 0.1,
+    "epochs": 40,
+    "batch_size": 512,
+    "valid_every": 5,
+    "patience": 5,
+    "seed": 17,
+    "output": "reproduction/sota/pilot02/depkg_independent_r256_n3p01_s17",
+    "resume": null
+  },
+  "checkpoint": "reproduction/sota/pilot02/depkg_independent_r256_n3p01_s17/best.pt",
+  "checkpoint_sha256": "ba38ad1b3369458fb559c8bf397c92923438b83a1054639690a97dd838308404",
+  "best_epoch": 40,
+  "validation": {
+    "macro": {
+      "mrr": 0.5478413912912097,
+      "h1": 0.4169669720867619,
+      "h10": 0.7617357345632287
+    },
+    "per_kg": {
+      "de": {
+        "mrr": 0.5153887315423006,
+        "h1": 0.37971345697459785,
+        "h10": 0.7431660367407928
+      },
+      "es": {
+        "mrr": 0.45137983534873255,
+        "h1": 0.32610619469026547,
+        "h10": 0.6699115044247788
+      },
+      "fr": {
+        "mrr": 0.5258770356949128,
+        "h1": 0.3843460865216304,
+        "h10": 0.7645244644494457
+      },
+      "it": {
+        "mrr": 0.5403715270306598,
+        "h1": 0.4108896996912714,
+        "h10": 0.7463747778089624
+      },
+      "jp": {
+        "mrr": 0.6520683899251466,
+        "h1": 0.5253898440623751,
+        "h10": 0.8412634946021591
+      },
+      "uk": {
+        "mrr": 0.6019628282055054,
+        "h1": 0.4753565505804312,
+        "h10": 0.8051741293532338
+      }
+    }
+  },
+  "validation_result_sha256": "fbd049f9933fe3734a564b7fb7314887faded24b0fb4e9f1da6814b973436275",
+  "selection_basis": "Reused complete seed17 pilot; choose maximum val_select macro MRR; earlier epoch on exact tie. Other seeds not used for selection or this phase result.",
+  "source_hashes": {
+    "reproduction/sota/train_complex.py": "d7bebad3de4e1838966051e5864c2b22e2a222cae43d052562cc8a181e856039",
+    "reproduction/sota/frozen_data.py": "c69444c2973d177ffcef995c978f0d2bbb86647c618b9d94e5507aa9947ec9fb",
+    "reproduction/sota/evaluate_single.py": "044a8f79fcee1cc51930cc1158b86ff9b1bed35fa31032fbfe8a5c2027f08a13"
+  },
+  "common_sha256": "7fc15ebec0d13ed30682bc545f3fb25c668887240ada202475a965148ef7f6cc",
+  "reference_registry_sha256": "308cd8e7c35e010e17db8408bafec27855814b49ea0a024d5394023e2a5a8942",
+  "references": {
+    "mrr": {
+      "value": 0.464,
+      "status": "user_provisional_reference",
+      "user_star": true,
+      "not_a_reproduction": true,
+      "local_column_maximum": {
+        "value": 0.4513020978655218,
+        "cell_id": "T2.epkg.lsmga.mrr",
+        "status": "local_reproduction",
+        "seeds": [
+          17
+        ]
+      }
+    },
+    "h1": {
+      "value": 0.3303,
+      "status": "user_provisional_reference",
+      "user_star": true,
+      "not_a_reproduction": true,
+      "local_column_maximum": {
+        "value": 0.3226541583494745,
+        "cell_id": "T2.epkg.lsmga.h1",
+        "status": "local_reproduction",
+        "seeds": [
+          17
+        ]
+      }
+    },
+    "h10": {
+      "value": 0.6955,
+      "status": "user_provisional_reference",
+      "user_star": true,
+      "not_a_reproduction": true,
+      "local_column_maximum": {
+        "value": 0.6837881827679871,
+        "cell_id": "T2.epkg.transe.h10",
+        "status": "local_reproduction",
+        "seeds": [
+          17,
+          29,
+          43
+        ]
+      }
+    }
+  },
+  "predecessor_locks": [
+    {
+      "dataset": "dbp5l",
+      "lock_sha256": "e358ffb5b9a34a0752549a61227866081917167a5a11d4c054705f9632f78899"
+    }
+  ],
+  "protocol": "kbs-baselines-v1-20260905",
+  "test_policy": "One test; no retraining/reselection after test; lock before transfer."
+}

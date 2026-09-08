@@ -1,0 +1,9 @@
+settings.json
+.vscode
+.idea
+__pycache__
+.ipynb_checkpoints
+*.py[cod]
+/data
+/logs
+*~

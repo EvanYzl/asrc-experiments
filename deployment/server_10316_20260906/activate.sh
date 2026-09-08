@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+export KGC_ROOT=/root/zhishitupui
+export PATH="$KGC_ROOT/.envs/kgc/bin:$PATH"
+export PIP_CONFIG_FILE="$KGC_ROOT/deployment/pip.conf"
+export PIP_CACHE_DIR="$KGC_ROOT/.cache/pip"
+export PYTHONNOUSERSITE=1
+export OMP_NUM_THREADS=4
+export MKL_NUM_THREADS=4
+export MPLBACKEND=Agg

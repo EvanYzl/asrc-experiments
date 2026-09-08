@@ -1,0 +1,15 @@
+trainer:
+  max_epochs: 10
+data:
+  batch_size: 128
+model:
+  hidden_size: 64
+  graph_norm: TANH
+  attn_norm: TANH
+  attn_intermediate_size: 256
+  loss_fn: mce
+  use_scheduler: false
+  attn_dropout: 0.5
+  attn_leaders: 500
+  weight_decay: 1e-5
+  top_k: 5

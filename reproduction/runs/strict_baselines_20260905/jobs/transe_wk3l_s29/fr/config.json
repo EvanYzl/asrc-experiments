@@ -1,0 +1,34 @@
+{
+  "method": "TransE",
+  "dataset": "wk3l",
+  "seed": 29,
+  "output": "G:\\zhishitupui\\reproduction\\runs\\strict_baselines_20260905\\jobs\\transe_wk3l_s29",
+  "steps": 10000,
+  "eval_steps": 2000,
+  "batch_size": 128,
+  "smoke": false,
+  "teacher": false,
+  "kg": "fr",
+  "embedding_dim": 200,
+  "margin": 8.0,
+  "negative_samples": 128,
+  "learning_rate": 0.001,
+  "training": "alternating head/tail; released loss; shuffled full-data epochs",
+  "selection": "val_select filtered tail MRR; strictly greater; earliest tie",
+  "selection_filter": "train+val_select",
+  "test_filter": "all",
+  "dataset_hash": "9cb319b1da31833cf32c5fa9eb3dc6792512c0adef5f3991eb28a271e6c16476",
+  "environment": {
+    "protocol": "kbs-baselines-v1-20260905",
+    "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+    "torch": "2.10.0+cu128",
+    "cuda": "12.8",
+    "numpy": "2.2.6",
+    "device": "NVIDIA GeForce RTX 5080"
+  },
+  "source_hashes": {
+    "reproduction\\sources\\ATransN\\src\\kge_model.py": "024ce445a67f79e3460be944e47f0b6f9f5fe2e1981c112dd2d7ddae0e00df2d",
+    "reproduction\\strict_baselines\\run_kge.py": "54345b79b4603f7660b0abe686e9f42368297193e1261fd666e7de71707f4ada",
+    "reproduction\\strict_baselines\\common.py": "2822266dfba89c642074719c88ea603e9a8795fabbd26db59afdb2e6ca00fad5"
+  }
+}

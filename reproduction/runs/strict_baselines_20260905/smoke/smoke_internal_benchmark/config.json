@@ -1,0 +1,30 @@
+{
+  "version": "internal-transe128-csr32-v1",
+  "dataset": "dbp5l",
+  "seed": 17,
+  "teacher_root": "G:\\zhishitupui\\reproduction\\runs\\strict_baselines_20260905\\smoke\\smoke_internal_teacher",
+  "base_root": "G:\\zhishitupui\\reproduction\\runs\\strict_baselines_20260905\\smoke\\smoke_internal_base",
+  "queries": 50,
+  "warmup_passes": 1,
+  "measured_passes": 1,
+  "latency_batch_size": 1,
+  "throughput_batch_size": 256,
+  "query_selection": "fixed seed 20260905; equal KG quotas then shuffle, no replacement",
+  "cache_state": "warm OS page cache and warmed CUDA kernels; CSR remains read-only mmap",
+  "scope": "score all target entities, source CSR fetch and message encoding when used, filter and rank current gold, CUDA synchronization",
+  "environment": {
+    "protocol": "kbs-baselines-v1-20260905",
+    "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+    "torch": "2.10.0+cu128",
+    "cuda": "12.8",
+    "numpy": "2.2.6",
+    "device": "NVIDIA GeForce RTX 5080"
+  },
+  "source_hashes": {
+    "reproduction\\strict_baselines\\benchmark_internal.py": "3e1153d397a9a1187d7b1121db5f5b3f82fa845bfb37bff7d6fa65df054253a3",
+    "reproduction\\strict_baselines\\internal_models.py": "b8c14b178c4ee19ee419931a47279431e36949f217f20a2527e3d2e4e18f1c05",
+    "reproduction\\strict_baselines\\internal_data.py": "234adc7275961bbe95e90db2478bd2fafad87656623b290860cd99d62980b83e",
+    "reproduction\\strict_baselines\\common.py": "2822266dfba89c642074719c88ea603e9a8795fabbd26db59afdb2e6ca00fad5"
+  },
+  "workload_sha256": "89844b6a4ddf342c791a32e5db367d7b61eda0b23a168e606f69c6ba9f632dc9"
+}

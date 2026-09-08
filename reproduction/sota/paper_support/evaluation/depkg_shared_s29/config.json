@@ -1,0 +1,83 @@
+{
+  "freeze_sha256": "90f9c9da96545c4ab2d59401e669bd26d7723f5a8f1653fb02864ede26deb134",
+  "entry": {
+    "id": "depkg_shared_s29",
+    "dataset": "depkg",
+    "variant": "shared",
+    "seed": 29,
+    "recipe": {
+      "rank": 256,
+      "reg": 0.01,
+      "lr": 0.1,
+      "epochs": 40,
+      "batch_size": 512,
+      "valid_every": 5,
+      "patience": 5,
+      "reciprocal": true,
+      "train_keep": 1.0,
+      "alignment_keep": 1.0,
+      "alignment_noise": 0.0,
+      "perturbation_seed": 20260906,
+      "dataset": "depkg",
+      "mode": "shared",
+      "seed": 29
+    },
+    "training_path": "reproduction/sota/paper_support/training/depkg_shared_s29",
+    "evaluation_path": "reproduction/sota/paper_support/evaluation/depkg_shared_s29",
+    "reuse_training": false,
+    "reuse_locked_test": false,
+    "trainer": "original",
+    "checkpoint_sha256": "3add206b582c40f469f0bce24e7ce9566247d5900002a52b55499e9ad59e7601",
+    "training_result_sha256": "58342004dfbfefe7b9ff8ae2cbecc313d38788efb334cd2252abf6d06062d5a5",
+    "validation": {
+      "macro": {
+        "mrr": 0.5407920260985074,
+        "h1": 0.39604062727818734,
+        "h10": 0.7808750161395394
+      },
+      "per_kg": {
+        "de": {
+          "mrr": 0.5138259932641013,
+          "h1": 0.3681111013448185,
+          "h10": 0.7620638129559638
+        },
+        "es": {
+          "mrr": 0.4578181161171079,
+          "h1": 0.32035398230088497,
+          "h10": 0.7037610619469027
+        },
+        "fr": {
+          "mrr": 0.515099356532548,
+          "h1": 0.36167375177127614,
+          "h10": 0.7836959239809953
+        },
+        "it": {
+          "mrr": 0.5333357635381338,
+          "h1": 0.386939844700159,
+          "h10": 0.7676115632893629
+        },
+        "jp": {
+          "mrr": 0.6249755662590146,
+          "h1": 0.47700919632147143,
+          "h10": 0.8532586965213914
+        },
+        "uk": {
+          "mrr": 0.5996973608801389,
+          "h1": 0.4621558872305141,
+          "h10": 0.8148590381426203
+        }
+      }
+    },
+    "best_epoch": 30,
+    "entity_map_sha256": {
+      "de": "59f41f1b6e165136faa31e6259c4e26f2a302b4ef2bd27fea6c953df224ba04e",
+      "es": "c800900fcaf7d091d505b8de02e1e172ee0c117e1f2ed8a4002bb6f675149071",
+      "fr": "f9aa985600cda5149cb3e8382ae85576362acd1f9b3439f1eef8c5fb40c1b8b0",
+      "it": "f36e3d5e14e700e1422c047184b826465b5523ec9e40a5b75fedf635118bc5c4",
+      "jp": "804e732500a8b9f474ef35262bab06397b37a15502292749259d1f107696093f",
+      "uk": "164b211fd3980b510bb01e844286d4cd896af1bb7d7a407f7b2b98e579c56339"
+    },
+    "parameters": 27754496
+  },
+  "protocol": "kbs-baselines-v1-20260905"
+}

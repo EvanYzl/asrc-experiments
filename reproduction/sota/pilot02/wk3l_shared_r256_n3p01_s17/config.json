@@ -1,0 +1,56 @@
+{
+  "method": "Aligned reciprocal ComplEx-N3",
+  "recipe": {
+    "dataset": "wk3l",
+    "sharing": "shared",
+    "rank": 256,
+    "reg": 0.01,
+    "lr": 0.1,
+    "epochs": 40,
+    "batch_size": 512,
+    "valid_every": 5,
+    "patience": 5,
+    "seed": 17,
+    "output": "reproduction/sota/pilot02/wk3l_shared_r256_n3p01_s17",
+    "resume": null
+  },
+  "alignment": {
+    "sharing": "shared",
+    "input_entities": 30562,
+    "alignment_files": {
+      "data/raw/atransn/SHARED/wk3l-15k_en_f_fr_aligned_entity_id.txt": {
+        "sha256": "3966025a0503e4feae4d32c56d240cdef258b77b82017ac0ccc56d0657cc8a15",
+        "pairs": 2496
+      }
+    },
+    "accepted_links": 2458,
+    "redundant_links": 0,
+    "conflicting_links": 38,
+    "shared_entities": 28104,
+    "relations": 4650,
+    "entity_map_sha256": {
+      "en": "e5b6204fc90cd414a324a980444d3c0db157c2c05b722762a8c601ffcac0cf0d",
+      "fr": "3e31e2e180065afa6584655180493f4c0dfc2cbd81616b0ad02bb9ce7cb7cdd4"
+    },
+    "rule": "Stable supplied alignment union; reject merges that identify distinct entities within a KG; no learned or held-out alignment."
+  },
+  "protocol": "kbs-baselines-v1-20260905",
+  "selection": "val_select macro tail MRR, train+val_select filter, full candidates, ascending entity-ID ties; earliest checkpoint on tie",
+  "input": "published train triples and supplied alignments only; reciprocal train augmentation",
+  "test_access": false,
+  "manifests": {
+    "en": "f4d447aefb64dfba88be544252c44ec4847b69dab9170904c1592395923b5396",
+    "fr": "c39e11b60d6f73720c0869708d789eeada03e7354aced6561342ad92dc1de91e"
+  },
+  "source_hashes": {
+    "train_complex.py": "d7bebad3de4e1838966051e5864c2b22e2a222cae43d052562cc8a181e856039",
+    "frozen_data.py": "c69444c2973d177ffcef995c978f0d2bbb86647c618b9d94e5507aa9947ec9fb"
+  },
+  "environment": {
+    "torch": "2.10.0+cu128",
+    "numpy": "2.2.6",
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "visible_gpu": "5",
+    "pid": 5444
+  }
+}

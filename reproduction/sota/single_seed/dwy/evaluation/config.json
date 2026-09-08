@@ -1,0 +1,105 @@
+{
+  "timestamp": "2026-09-06T05:05:01.510017+00:00",
+  "dataset": "dwy",
+  "seed": 17,
+  "method": "ASRC (Alignment-selective Reciprocal ComplEx)",
+  "algorithm_definition": "Reciprocal ComplEx, full-softmax training, N3 regularization, optional deterministic alignment entity sharing selected only by val_select; no text/external data",
+  "recipe": {
+    "dataset": "dwy",
+    "sharing": "shared",
+    "rank": 256,
+    "reg": 0.01,
+    "lr": 0.1,
+    "epochs": 40,
+    "batch_size": 512,
+    "valid_every": 5,
+    "patience": 5,
+    "seed": 17,
+    "output": "reproduction/sota/pilot02/dwy_shared_r256_n3p01_s17",
+    "resume": null
+  },
+  "checkpoint": "reproduction/sota/pilot02/dwy_shared_r256_n3p01_s17/best.pt",
+  "checkpoint_sha256": "2e419f76db011d0c4ae1b56d5befc9e8601c907290442f2cd29a41d507695c00",
+  "best_epoch": 30,
+  "validation": {
+    "macro": {
+      "mrr": 0.6226364213874,
+      "h1": 0.5202262199571097,
+      "h10": 0.7862070351529341
+    },
+    "per_kg": {
+      "db": {
+        "mrr": 0.6380329116721078,
+        "h1": 0.530688622754491,
+        "h10": 0.8211077844311377
+      },
+      "wk": {
+        "mrr": 0.55729522176054,
+        "h1": 0.4744539781591264,
+        "h10": 0.6905226209048362
+      },
+      "yg": {
+        "mrr": 0.6725811307295521,
+        "h1": 0.5555360589577119,
+        "h10": 0.8469907001228286
+      }
+    }
+  },
+  "validation_result_sha256": "70abf6d9f62f713ef43121f07215fde0eb245e871815b1e91d45d6d5751aac19",
+  "selection_basis": "Reused complete seed17 pilot; choose maximum val_select macro MRR; earlier epoch on exact tie. Other seeds not used for selection or this phase result.",
+  "source_hashes": {
+    "reproduction/sota/train_complex.py": "d7bebad3de4e1838966051e5864c2b22e2a222cae43d052562cc8a181e856039",
+    "reproduction/sota/frozen_data.py": "c69444c2973d177ffcef995c978f0d2bbb86647c618b9d94e5507aa9947ec9fb",
+    "reproduction/sota/evaluate_single.py": "044a8f79fcee1cc51930cc1158b86ff9b1bed35fa31032fbfe8a5c2027f08a13"
+  },
+  "common_sha256": "7fc15ebec0d13ed30682bc545f3fb25c668887240ada202475a965148ef7f6cc",
+  "reference_registry_sha256": "308cd8e7c35e010e17db8408bafec27855814b49ea0a024d5394023e2a5a8942",
+  "references": {
+    "mrr": {
+      "value": 0.44223542456355974,
+      "cell_id": "T2.dwy.distmult.mrr",
+      "status": "local_reproduction",
+      "seeds": [
+        17,
+        29,
+        43
+      ],
+      "user_star": false
+    },
+    "h1": {
+      "value": 0.33015852235104354,
+      "cell_id": "T2.dwy.distmult.h1",
+      "status": "local_reproduction",
+      "seeds": [
+        17,
+        29,
+        43
+      ],
+      "user_star": false
+    },
+    "h10": {
+      "value": 0.6497,
+      "status": "user_provisional_reference",
+      "user_star": true,
+      "not_a_reproduction": true,
+      "local_column_maximum": {
+        "value": 0.6497,
+        "cell_id": "T2.dwy.dmkgc.h10",
+        "status": "user_provisional_reference",
+        "seeds": []
+      }
+    }
+  },
+  "predecessor_locks": [
+    {
+      "dataset": "dbp5l",
+      "lock_sha256": "e358ffb5b9a34a0752549a61227866081917167a5a11d4c054705f9632f78899"
+    },
+    {
+      "dataset": "depkg",
+      "lock_sha256": "de80d0749e19e43e40fd80b6f48cddca2c5c3c0ec77a69d49be5609ea7b6ad0e"
+    }
+  ],
+  "protocol": "kbs-baselines-v1-20260905",
+  "test_policy": "One test; no retraining/reselection after test; lock before transfer."
+}

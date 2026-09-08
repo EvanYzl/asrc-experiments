@@ -1,0 +1,9 @@
+trainer:
+  max_epochs: 20
+data:
+  batch_size: 16
+model:
+  graph_norm: TANH
+  attn_norm: TANH
+  loss_fn: ce
+  top_k: 7

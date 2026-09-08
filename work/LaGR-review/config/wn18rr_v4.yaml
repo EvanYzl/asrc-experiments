@@ -1,0 +1,12 @@
+trainer:
+  max_epochs: 10
+data:
+  batch_size: 192
+model:
+  graph_norm: TANH
+  attn_norm: TANH
+  loss_fn: mce
+  use_scheduler: false
+  attn_dropout: 0.3
+  attn_leaders: 300
+  top_k: 10

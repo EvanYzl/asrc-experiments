@@ -1,0 +1,2 @@
+# Preserve the recorded source-file bytes on checkout and commit.
+* -text

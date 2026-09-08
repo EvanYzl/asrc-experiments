@@ -1,0 +1,155 @@
+{
+  "timestamp": "2026-09-06T04:43:57.773684+00:00",
+  "stage": "candidate_configuration_frozen_before_confirmation",
+  "method": "ASRC (Alignment-selective Reciprocal ComplEx)",
+  "source_hashes": {
+    "train_complex.py": "d7bebad3de4e1838966051e5864c2b22e2a222cae43d052562cc8a181e856039",
+    "frozen_data.py": "c69444c2973d177ffcef995c978f0d2bbb86647c618b9d94e5507aa9947ec9fb"
+  },
+  "selection_basis": "Only seed-17 val_select macro MRR; six predeclared configurations; no candidate test access.",
+  "datasets": {
+    "dbp5l": {
+      "sharing": "shared",
+      "seed17_run": "reproduction/sota/pilot02/dbp5l_shared_r256_n3p01_s17",
+      "seed17_checkpoint_sha256": "77a11189cc59fc7433b1fef03fe01a011801f91122dfec6fb94cab6b3a3e49e1",
+      "seed17_validation": {
+        "macro": {
+          "mrr": 0.6858191508457022,
+          "h1": 0.5770138383160693,
+          "h10": 0.860676082531025
+        },
+        "per_kg": {
+          "el": {
+            "mrr": 0.7760070617004766,
+            "h1": 0.6719653179190751,
+            "h10": 0.9320809248554913
+          },
+          "en": {
+            "mrr": 0.546410952673467,
+            "h1": 0.43788458340262765,
+            "h10": 0.7323299517711624
+          },
+          "es": {
+            "mrr": 0.6855647847168984,
+            "h1": 0.5711467324290999,
+            "h10": 0.863501849568434
+          },
+          "fr": {
+            "mrr": 0.7021156010244557,
+            "h1": 0.5909152726778186,
+            "h10": 0.8808649530803754
+          },
+          "ja": {
+            "mrr": 0.7189973541132135,
+            "h1": 0.6131572851517257,
+            "h10": 0.8946027333796618
+          }
+        }
+      },
+      "seed17_best_epoch": 35
+    },
+    "depkg": {
+      "sharing": "independent",
+      "seed17_run": "reproduction/sota/pilot02/depkg_independent_r256_n3p01_s17",
+      "seed17_checkpoint_sha256": "ba38ad1b3369458fb559c8bf397c92923438b83a1054639690a97dd838308404",
+      "seed17_validation": {
+        "macro": {
+          "mrr": 0.5478413912912097,
+          "h1": 0.4169669720867619,
+          "h10": 0.7617357345632287
+        },
+        "per_kg": {
+          "de": {
+            "mrr": 0.5153887315423006,
+            "h1": 0.37971345697459785,
+            "h10": 0.7431660367407928
+          },
+          "es": {
+            "mrr": 0.45137983534873255,
+            "h1": 0.32610619469026547,
+            "h10": 0.6699115044247788
+          },
+          "fr": {
+            "mrr": 0.5258770356949128,
+            "h1": 0.3843460865216304,
+            "h10": 0.7645244644494457
+          },
+          "it": {
+            "mrr": 0.5403715270306598,
+            "h1": 0.4108896996912714,
+            "h10": 0.7463747778089624
+          },
+          "jp": {
+            "mrr": 0.6520683899251466,
+            "h1": 0.5253898440623751,
+            "h10": 0.8412634946021591
+          },
+          "uk": {
+            "mrr": 0.6019628282055054,
+            "h1": 0.4753565505804312,
+            "h10": 0.8051741293532338
+          }
+        }
+      },
+      "seed17_best_epoch": 40
+    },
+    "dwy": {
+      "sharing": "shared",
+      "seed17_run": "reproduction/sota/pilot02/dwy_shared_r256_n3p01_s17",
+      "seed17_checkpoint_sha256": "2e419f76db011d0c4ae1b56d5befc9e8601c907290442f2cd29a41d507695c00",
+      "seed17_validation": {
+        "macro": {
+          "mrr": 0.6226364213874,
+          "h1": 0.5202262199571097,
+          "h10": 0.7862070351529341
+        },
+        "per_kg": {
+          "db": {
+            "mrr": 0.6380329116721078,
+            "h1": 0.530688622754491,
+            "h10": 0.8211077844311377
+          },
+          "wk": {
+            "mrr": 0.55729522176054,
+            "h1": 0.4744539781591264,
+            "h10": 0.6905226209048362
+          },
+          "yg": {
+            "mrr": 0.6725811307295521,
+            "h1": 0.5555360589577119,
+            "h10": 0.8469907001228286
+          }
+        }
+      },
+      "seed17_best_epoch": 30
+    },
+    "wk3l": {
+      "sharing": "shared",
+      "seed17_run": "reproduction/sota/pilot02/wk3l_shared_r256_n3p01_s17",
+      "seed17_checkpoint_sha256": "449aa2219c4df4a63ef02f6b1eca69b108ce9869b8bd09992877278f6508f969",
+      "seed17_validation": {
+        "macro": {
+          "mrr": 0.4475911460228739,
+          "h1": 0.3476349569192896,
+          "h10": 0.653361467674814
+        },
+        "per_kg": {
+          "fr": {
+            "mrr": 0.4475911460228739,
+            "h1": 0.3476349569192896,
+            "h10": 0.653361467674814
+          }
+        }
+      },
+      "seed17_best_epoch": 35
+    }
+  },
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "rule": "rank256, N3=0.01, Adagrad lr0.1, batch512, initialization std0.001, max40 epochs, validate every5, patience5; select maximum val_select macro MRR, earliest tie",
+  "no_further_candidate_search": true,
+  "test_gate": "Do not run candidate test until all confirmation checkpoints and all comparable baseline maxima are frozen. Final failure stops optimization; no test-guided retry."
+}

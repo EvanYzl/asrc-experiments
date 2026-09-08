@@ -1,0 +1,120 @@
+{
+  "method": "Aligned reciprocal ComplEx-N3",
+  "recipe": {
+    "dataset": "depkg",
+    "sharing": "independent",
+    "rank": 256,
+    "reg": 0.01,
+    "lr": 0.1,
+    "epochs": 40,
+    "batch_size": 512,
+    "valid_every": 5,
+    "patience": 5,
+    "seed": 43,
+    "output": "reproduction/sota/confirmation/asrc_depkg_s43",
+    "resume": null
+  },
+  "alignment": {
+    "sharing": "independent",
+    "input_entities": 78742,
+    "alignment_files": {
+      "data/raw/dmkgc/datasetdepkg/seed_alignlinks/de-es.tsv": {
+        "sha256": "c3a5dfaf33a98092e357c193a700bc0c13e0deaf5f5c44df8072a389d89a7725",
+        "pairs": 4597
+      },
+      "data/raw/dmkgc/datasetdepkg/seed_alignlinks/de-fr.tsv": {
+        "sha256": "02be3e270b471b1c167912073327388e0d966afc3ef4fe5af97d71bffee4def0",
+        "pairs": 6189
+      },
+      "data/raw/dmkgc/datasetdepkg/seed_alignlinks/de-it.tsv": {
+        "sha256": "f17cbd045e867ebe4410c7dfa791fc14b09eb1f2a36e282404f2494b1f6b577e",
+        "pairs": 5669
+      },
+      "data/raw/dmkgc/datasetdepkg/seed_alignlinks/de-jp.tsv": {
+        "sha256": "bb0e780b806face1c7766d4206876f3feb1235ad5e0e1456b365fa90e9837ecb",
+        "pairs": 1143
+      },
+      "data/raw/dmkgc/datasetdepkg/seed_alignlinks/de-uk.tsv": {
+        "sha256": "a7da62befa4c517ce2b7998de59e307e999f6e74323baf6a50d903ad9f940508",
+        "pairs": 5722
+      },
+      "data/raw/dmkgc/datasetdepkg/seed_alignlinks/es-fr.tsv": {
+        "sha256": "ced95c00bcffb08687d34d13835c65a4ae144a56f298f0664087f57166de6e40",
+        "pairs": 4753
+      },
+      "data/raw/dmkgc/datasetdepkg/seed_alignlinks/es-it.tsv": {
+        "sha256": "f107df814c65562c245375fba49d636f2ebeecb6c91a876effd8891ad23768ba",
+        "pairs": 4823
+      },
+      "data/raw/dmkgc/datasetdepkg/seed_alignlinks/es-jp.tsv": {
+        "sha256": "09817d3690514e506b84d16d515f32686788906a64dc45696f2a903f37208bb7",
+        "pairs": 769
+      },
+      "data/raw/dmkgc/datasetdepkg/seed_alignlinks/es-uk.tsv": {
+        "sha256": "a7e85f1ee6ec08d3063d16d32016ec2e296ca5f5c94696a4615ed08336ed9218",
+        "pairs": 3502
+      },
+      "data/raw/dmkgc/datasetdepkg/seed_alignlinks/fr-it.tsv": {
+        "sha256": "b5bf71c8dddc46c77e6a3ada1d39ce29dca8ce90703067ad0fd8c2e402ca1ae2",
+        "pairs": 6037
+      },
+      "data/raw/dmkgc/datasetdepkg/seed_alignlinks/fr-jp.tsv": {
+        "sha256": "e800fc249f31db4aaca9d9160bc71be5c7c197921e5566d6386e6f3ef6a437b2",
+        "pairs": 907
+      },
+      "data/raw/dmkgc/datasetdepkg/seed_alignlinks/fr-uk.tsv": {
+        "sha256": "1bb5878a367997a4fad45631faf86b4faf939628f8e6abc9be4720a8bed1e73d",
+        "pairs": 4909
+      },
+      "data/raw/dmkgc/datasetdepkg/seed_alignlinks/it-jp.tsv": {
+        "sha256": "b6e6c05dad462f370b64da331130e46e91dcf339b7c84d4d07a7ed2ac0289102",
+        "pairs": 866
+      },
+      "data/raw/dmkgc/datasetdepkg/seed_alignlinks/it-uk.tsv": {
+        "sha256": "221021638bc70e9019f14aee243802e09982f869d386e83f1d697311cc98108f",
+        "pairs": 4520
+      },
+      "data/raw/dmkgc/datasetdepkg/seed_alignlinks/jp-uk.tsv": {
+        "sha256": "8f56055be92878c9b061184e9ea1501a8b2c4e4e9ddd1981402ab3fb121e4bca",
+        "pairs": 1293
+      }
+    },
+    "accepted_links": 0,
+    "redundant_links": 0,
+    "conflicting_links": 0,
+    "shared_entities": 78742,
+    "relations": 126,
+    "entity_map_sha256": {
+      "de": "59f41f1b6e165136faa31e6259c4e26f2a302b4ef2bd27fea6c953df224ba04e",
+      "es": "75edeb49f2b0f76a15cac6a153f078aea06798229c809abf8fce4968dd86075b",
+      "fr": "abe87281809837fc63d59e26252ae5327340dd42a1bb29da114c16102a845e8d",
+      "it": "5f1febd50df472fd770ded049ae3b6acbfa42763edf2fe81911ffc7a156c2f4e",
+      "jp": "58f4f86c3f4a8f20998f4f69261f37408fae4a4f1fa719b12ff8a247aca02e49",
+      "uk": "4920e4d5e66ead5945235a13068818a1d940a7b2799cf5b577114998064bd2de"
+    },
+    "rule": "Stable supplied alignment union; reject merges that identify distinct entities within a KG; no learned or held-out alignment."
+  },
+  "protocol": "kbs-baselines-v1-20260905",
+  "selection": "val_select macro tail MRR, train+val_select filter, full candidates, ascending entity-ID ties; earliest checkpoint on tie",
+  "input": "published train triples and supplied alignments only; reciprocal train augmentation",
+  "test_access": false,
+  "manifests": {
+    "de": "0375ac1855839008a401b30797549ddb374259827b40c65bb1211723fd15bd93",
+    "es": "1f992cc41eb99db50ac84b02f802cfdd1af9dcdeef55940fa42600254b43ab27",
+    "fr": "cef7f9733c54cec94f7268764a07fb35fe068172486798eb00e5566f2939f720",
+    "it": "c6d0bfca13569cb6d057e99d6ad03d1153b2f3f1d0d123d2859d10bc0ef14798",
+    "jp": "b5e4f4806c0656387b5b80ab8c58672ceed3e4a226d6e742561160936e04f366",
+    "uk": "526c77261931e70fece8a103541f30415bd4856de2a7ec6d97e5354ccdd5fe0b"
+  },
+  "source_hashes": {
+    "train_complex.py": "d7bebad3de4e1838966051e5864c2b22e2a222cae43d052562cc8a181e856039",
+    "frozen_data.py": "c69444c2973d177ffcef995c978f0d2bbb86647c618b9d94e5507aa9947ec9fb"
+  },
+  "environment": {
+    "torch": "2.10.0+cu128",
+    "numpy": "2.2.6",
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "visible_gpu": "3",
+    "pid": 5722
+  }
+}

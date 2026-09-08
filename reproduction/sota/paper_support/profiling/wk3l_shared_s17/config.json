@@ -1,0 +1,21 @@
+{
+  "id": "wk3l_shared_s17",
+  "spec": {
+    "gpu": 0,
+    "queries_per_kg": 256,
+    "warmup_passes": 3,
+    "measured_passes": 10,
+    "batch_latency": 1,
+    "batch_throughput": 256,
+    "query_split": "first 256 frozen val_select rows per KG",
+    "operation": "CPU query tensor construction, all-candidate scoring, filtering, gold rank and stable top10; exclude model/data loading and disk output",
+    "aggregate": "KG-macro per-seed p50/p95/QPS, then three-seed mean and sample SD; peaks max across KG within seed"
+  },
+  "checkpoint_sha256": "449aa2219c4df4a63ef02f6b1eca69b108ce9869b8bd09992877278f6508f969",
+  "freeze_sha256": "90f9c9da96545c4ab2d59401e669bd26d7723f5a8f1653fb02864ede26deb134",
+  "gpu": "NVIDIA GeForce RTX 2080 Ti",
+  "torch": "2.10.0+cu128",
+  "pid": 8708,
+  "test_access": false,
+  "optimizer_loaded_to_gpu": false
+}

@@ -1,0 +1,6 @@
+data:
+  batch_size: 8
+model:
+  attn_leaders: 500
+  loss_fn: mce
+  delta: 5

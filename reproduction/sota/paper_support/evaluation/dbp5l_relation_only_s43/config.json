@@ -1,0 +1,77 @@
+{
+  "freeze_sha256": "90f9c9da96545c4ab2d59401e669bd26d7723f5a8f1653fb02864ede26deb134",
+  "entry": {
+    "id": "dbp5l_relation_only_s43",
+    "dataset": "dbp5l",
+    "variant": "relation_only",
+    "seed": 43,
+    "recipe": {
+      "rank": 256,
+      "reg": 0.01,
+      "lr": 0.1,
+      "epochs": 40,
+      "batch_size": 512,
+      "valid_every": 5,
+      "patience": 5,
+      "reciprocal": true,
+      "train_keep": 1.0,
+      "alignment_keep": 1.0,
+      "alignment_noise": 0.0,
+      "perturbation_seed": 20260906,
+      "dataset": "dbp5l",
+      "mode": "relation_only",
+      "seed": 43
+    },
+    "training_path": "reproduction/sota/paper_support/training/dbp5l_relation_only_s43",
+    "evaluation_path": "reproduction/sota/paper_support/evaluation/dbp5l_relation_only_s43",
+    "reuse_training": false,
+    "reuse_locked_test": false,
+    "trainer": "support",
+    "checkpoint_sha256": "07ca28c6000ef229739277db3893a27f3a69553795269b10f79ca0dd4248dfe9",
+    "training_result_sha256": "ec2388577ace5a7dff85ea4adc02aa6c8c8b0d4da7736a1e0f50a54a84c1a575",
+    "validation": {
+      "macro": {
+        "mrr": 0.41628419507048064,
+        "h1": 0.3208389088730053,
+        "h10": 0.5976475106677717
+      },
+      "per_kg": {
+        "el": {
+          "mrr": 0.433974714786287,
+          "h1": 0.34152215799614644,
+          "h10": 0.6160886319845857
+        },
+        "en": {
+          "mrr": 0.3750089816250186,
+          "h1": 0.27914518543156497,
+          "h10": 0.5509728920671878
+        },
+        "es": {
+          "mrr": 0.4098330489890469,
+          "h1": 0.306288532675709,
+          "h10": 0.6022194821208384
+        },
+        "fr": {
+          "mrr": 0.44089244059089727,
+          "h1": 0.3413572691418469,
+          "h10": 0.6240990072079423
+        },
+        "ja": {
+          "mrr": 0.42171178936115344,
+          "h1": 0.3358813991197591,
+          "h10": 0.5948575399583044
+        }
+      }
+    },
+    "best_epoch": 40,
+    "entity_map_sha256": {
+      "el": "351f450cb5efaa0ba3844a2df91a2aaf3d0e3efaa143ec0c81c34ff3793d663e",
+      "en": "94b16bea88fba788900daaa72f13a60c741ae129a9f705c51f4fdaf975d1e869",
+      "es": "f8b1cfb107ce604d27fc1b3fff713b1a6290a0f510b07c9fdcdbc650068bbd04",
+      "fr": "b83c1d2afbda45321dddd09096347c0f9ce1d363c42822484dff732110c644ae",
+      "ja": "b20d62dc7d42d63eecc60c423f584c8b5869bc26734136dbeca0f26668e63e3e"
+    },
+    "parameters": 29956608
+  },
+  "protocol": "kbs-baselines-v1-20260905"
+}

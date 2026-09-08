@@ -1,0 +1,9 @@
+trainer:
+  max_epochs: 4
+data:
+  batch_size: 16
+model:
+  loss_fn: mce
+  use_scheduler: false
+  top_k: 3
+  delta: 5

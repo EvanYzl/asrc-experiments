@@ -1,0 +1,65 @@
+{
+  "freeze_sha256": "90f9c9da96545c4ab2d59401e669bd26d7723f5a8f1653fb02864ede26deb134",
+  "entry": {
+    "id": "dwy_independent_s29",
+    "dataset": "dwy",
+    "variant": "independent",
+    "seed": 29,
+    "recipe": {
+      "rank": 256,
+      "reg": 0.01,
+      "lr": 0.1,
+      "epochs": 40,
+      "batch_size": 512,
+      "valid_every": 5,
+      "patience": 5,
+      "reciprocal": true,
+      "train_keep": 1.0,
+      "alignment_keep": 1.0,
+      "alignment_noise": 0.0,
+      "perturbation_seed": 20260906,
+      "dataset": "dwy",
+      "mode": "independent",
+      "seed": 29
+    },
+    "training_path": "reproduction/sota/paper_support/training/dwy_independent_s29",
+    "evaluation_path": "reproduction/sota/paper_support/evaluation/dwy_independent_s29",
+    "reuse_training": false,
+    "reuse_locked_test": false,
+    "trainer": "original",
+    "checkpoint_sha256": "6f9e2b81439fca45e199c0a9c3da79c0519d090f76d981d92ea34082960b5671",
+    "training_result_sha256": "72fb6f9db70ec338e21ccd823a916ce45d0ef6f1bb3a61d103a254e04bad7832",
+    "validation": {
+      "macro": {
+        "mrr": 0.5480052818642211,
+        "h1": 0.44851723658705245,
+        "h10": 0.7133049540360088
+      },
+      "per_kg": {
+        "db": {
+          "mrr": 0.5325985886390872,
+          "h1": 0.43226047904191617,
+          "h10": 0.7140718562874252
+        },
+        "wk": {
+          "mrr": 0.4972633165822,
+          "h1": 0.4200468018720749,
+          "h10": 0.6285101404056163
+        },
+        "yg": {
+          "mrr": 0.6141539403713762,
+          "h1": 0.4932444288471662,
+          "h10": 0.797332865414985
+        }
+      }
+    },
+    "best_epoch": 30,
+    "entity_map_sha256": {
+      "db": "427a7788a0fab350907c2186a638fdb6ebe8e75b77e5f54bfc7a4126e63978d3",
+      "wk": "8bd66717523c1838180d5d94c4c92012851c06adbe63facf52657a013571bea3",
+      "yg": "1c9cdb312e4ad5acecbd5d6f12e95238893d4305c336a11e99d436f4d27d111a"
+    },
+    "parameters": 29032448
+  },
+  "protocol": "kbs-baselines-v1-20260905"
+}

@@ -1,0 +1,77 @@
+{
+  "freeze_sha256": "90f9c9da96545c4ab2d59401e669bd26d7723f5a8f1653fb02864ede26deb134",
+  "entry": {
+    "id": "dbp5l_train50_independent_s43",
+    "dataset": "dbp5l",
+    "variant": "train50_independent",
+    "seed": 43,
+    "recipe": {
+      "rank": 256,
+      "reg": 0.01,
+      "lr": 0.1,
+      "epochs": 40,
+      "batch_size": 512,
+      "valid_every": 5,
+      "patience": 5,
+      "reciprocal": true,
+      "train_keep": 0.5,
+      "alignment_keep": 1.0,
+      "alignment_noise": 0.0,
+      "perturbation_seed": 20260906,
+      "dataset": "dbp5l",
+      "mode": "independent",
+      "seed": 43
+    },
+    "training_path": "reproduction/sota/paper_support/training/dbp5l_train50_independent_s43",
+    "evaluation_path": "reproduction/sota/paper_support/evaluation/dbp5l_train50_independent_s43",
+    "reuse_training": false,
+    "reuse_locked_test": false,
+    "trainer": "support",
+    "checkpoint_sha256": "5cce6e9dbd9803c5fadb2a8adce8c27e2d61341198cd76b898ed5c38aa11c4b8",
+    "training_result_sha256": "9452c511daae4721c12956b14de45bb981f940338ca63935ac36ba99efd14dc5",
+    "validation": {
+      "macro": {
+        "mrr": 0.2822177361933013,
+        "h1": 0.2064020781740695,
+        "h10": 0.4309053687077248
+      },
+      "per_kg": {
+        "el": {
+          "mrr": 0.2730004024586931,
+          "h1": 0.19990366088631983,
+          "h10": 0.4190751445086705
+        },
+        "en": {
+          "mrr": 0.23747417814020394,
+          "h1": 0.16397804756361217,
+          "h10": 0.37801430234491934
+        },
+        "es": {
+          "mrr": 0.28414270557672583,
+          "h1": 0.19839704069050554,
+          "h10": 0.45400739827373615
+        },
+        "fr": {
+          "mrr": 0.3187063539142009,
+          "h1": 0.24017407860737114,
+          "h10": 0.46933224534203727
+        },
+        "ja": {
+          "mrr": 0.2977650408766831,
+          "h1": 0.2295575631225388,
+          "h10": 0.43409775306926107
+        }
+      }
+    },
+    "best_epoch": 15,
+    "entity_map_sha256": {
+      "el": "351f450cb5efaa0ba3844a2df91a2aaf3d0e3efaa143ec0c81c34ff3793d663e",
+      "en": "94b16bea88fba788900daaa72f13a60c741ae129a9f705c51f4fdaf975d1e869",
+      "es": "f8b1cfb107ce604d27fc1b3fff713b1a6290a0f510b07c9fdcdbc650068bbd04",
+      "fr": "b83c1d2afbda45321dddd09096347c0f9ce1d363c42822484dff732110c644ae",
+      "ja": "b20d62dc7d42d63eecc60c423f584c8b5869bc26734136dbeca0f26668e63e3e"
+    },
+    "parameters": 33888768
+  },
+  "protocol": "kbs-baselines-v1-20260905"
+}

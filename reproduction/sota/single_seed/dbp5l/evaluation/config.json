@@ -1,0 +1,102 @@
+{
+  "timestamp": "2026-09-06T04:58:16.950300+00:00",
+  "dataset": "dbp5l",
+  "seed": 17,
+  "method": "ASRC (Alignment-selective Reciprocal ComplEx)",
+  "algorithm_definition": "Reciprocal ComplEx, full-softmax training, N3 regularization, optional deterministic alignment entity sharing selected only by val_select; no text/external data",
+  "recipe": {
+    "dataset": "dbp5l",
+    "sharing": "shared",
+    "rank": 256,
+    "reg": 0.01,
+    "lr": 0.1,
+    "epochs": 40,
+    "batch_size": 512,
+    "valid_every": 5,
+    "patience": 5,
+    "seed": 17,
+    "output": "reproduction/sota/pilot02/dbp5l_shared_r256_n3p01_s17",
+    "resume": null
+  },
+  "checkpoint": "reproduction/sota/pilot02/dbp5l_shared_r256_n3p01_s17/best.pt",
+  "checkpoint_sha256": "77a11189cc59fc7433b1fef03fe01a011801f91122dfec6fb94cab6b3a3e49e1",
+  "best_epoch": 35,
+  "validation": {
+    "macro": {
+      "mrr": 0.6858191508457022,
+      "h1": 0.5770138383160693,
+      "h10": 0.860676082531025
+    },
+    "per_kg": {
+      "el": {
+        "mrr": 0.7760070617004766,
+        "h1": 0.6719653179190751,
+        "h10": 0.9320809248554913
+      },
+      "en": {
+        "mrr": 0.546410952673467,
+        "h1": 0.43788458340262765,
+        "h10": 0.7323299517711624
+      },
+      "es": {
+        "mrr": 0.6855647847168984,
+        "h1": 0.5711467324290999,
+        "h10": 0.863501849568434
+      },
+      "fr": {
+        "mrr": 0.7021156010244557,
+        "h1": 0.5909152726778186,
+        "h10": 0.8808649530803754
+      },
+      "ja": {
+        "mrr": 0.7189973541132135,
+        "h1": 0.6131572851517257,
+        "h10": 0.8946027333796618
+      }
+    }
+  },
+  "validation_result_sha256": "d3f202795a46bb8e685ca65cef05c31f11cb304c306188eeedc4db89e710ebb3",
+  "selection_basis": "Reused complete seed17 pilot; choose maximum val_select macro MRR; earlier epoch on exact tie. Other seeds not used for selection or this phase result.",
+  "source_hashes": {
+    "reproduction/sota/train_complex.py": "d7bebad3de4e1838966051e5864c2b22e2a222cae43d052562cc8a181e856039",
+    "reproduction/sota/frozen_data.py": "c69444c2973d177ffcef995c978f0d2bbb86647c618b9d94e5507aa9947ec9fb",
+    "reproduction/sota/evaluate_single.py": "044a8f79fcee1cc51930cc1158b86ff9b1bed35fa31032fbfe8a5c2027f08a13"
+  },
+  "common_sha256": "7fc15ebec0d13ed30682bc545f3fb25c668887240ada202475a965148ef7f6cc",
+  "reference_registry_sha256": "308cd8e7c35e010e17db8408bafec27855814b49ea0a024d5394023e2a5a8942",
+  "references": {
+    "mrr": {
+      "value": 0.5046885862739643,
+      "cell_id": "T2.dbp.dmkgc.mrr",
+      "status": "local_reproduction",
+      "seeds": [
+        17
+      ],
+      "user_star": false
+    },
+    "h1": {
+      "value": 0.3731318975042563,
+      "cell_id": "T2.dbp.dmkgc.h1",
+      "status": "local_reproduction",
+      "seeds": [
+        17
+      ],
+      "user_star": false
+    },
+    "h10": {
+      "value": 0.7888,
+      "status": "user_provisional_reference",
+      "user_star": true,
+      "not_a_reproduction": true,
+      "local_column_maximum": {
+        "value": 0.7888,
+        "cell_id": "T2.dbp.imkgc.h10",
+        "status": "user_provisional_reference",
+        "seeds": []
+      }
+    }
+  },
+  "predecessor_locks": [],
+  "protocol": "kbs-baselines-v1-20260905",
+  "test_policy": "One test; no retraining/reselection after test; lock before transfer."
+}
